@@ -35,7 +35,11 @@ public class ListDirectoryTreeManagement {
             String type = file.isDirectory() ? "[D]" : "[F]";
             String lastModified = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(file.lastModified());
             //System.out.printf("%s %s - Last Modified: %s%n", type, file.getName(), lastModified);
-            String line = type + file.getName() + "- Las Modifications: " +  lastModified;
+            String space = "";
+            for(int i = 0; i < level; i++) {
+                space = space + "  ";
+            }
+            String line = space + type + file.getName() + "- Last Modifications: " +  lastModified;
             saveDirectoryTree(line);
             if (file.isDirectory()) {
                 loadDirectory(file, level + 1);

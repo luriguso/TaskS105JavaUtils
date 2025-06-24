@@ -1,7 +1,5 @@
 package level1.exercise1.classManagement;
 
-
-
 import level1.exercise1.classData.ListDirectory;
 
 import java.io.File;
